@@ -31,7 +31,6 @@ async function getContactById(contactId) {
 
 async function removeContact(contactId) {
   try {
-    console.log(contactId);
     const contacts = JSON.parse(await fs.readFile(contactsPath, "utf-8"));
     const deleteIndex = contacts.findIndex(
       (contact) => contact.id === contactId
